@@ -8,6 +8,7 @@ module.exports = function(api) {
           '@assets': './src/assets',
           '@components': './src/components',
           '@fonts': './src/fonts',
+          '@styles': './src/styles',
         },
       },
     ],

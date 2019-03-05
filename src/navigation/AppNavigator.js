@@ -8,14 +8,16 @@ import AppStack from './MainTabNavigator';
 
 import Join from '../screens/Join';
 import SignIn from '../screens/SignIn';
+import Welcome from '../screens/Welcome';
 
 const AuthStack = createStackNavigator(
   {
     Join,
     SignIn,
+    Welcome,
   },
   {
-    initialRouteName: 'SignIn',
+    initialRouteName: 'Welcome',
   }
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import Page from '../components/styles/Page';
+import Wrapper from '@styles';
 
 export default class Courses extends React.Component {
   static navigationOptions = {
@@ -10,9 +10,9 @@ export default class Courses extends React.Component {
 
   render() {
     return (
-      <Page>
+      <Wrapper>
         <Text>Courses Screen</Text>
-      </Page>
+      </Wrapper>
     );
   }
 }

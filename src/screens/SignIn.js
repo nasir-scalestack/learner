@@ -1,9 +1,7 @@
 import React from 'react';
-import { Image, Text } from 'react-native';
+import { Text } from 'react-native';
 
-import * as images from '@assets';
-
-import Page from '../components/styles/Page';
+import { Wrapper } from '@styles';
 
 export default class SignIn extends React.Component {
   static navigationOptions = {
@@ -13,10 +11,9 @@ export default class SignIn extends React.Component {
 
   render() {
     return (
-      <Page>
-        <Image source={images.welcomeArtwork} />
+      <Wrapper>
         <Text>SignIn Screen</Text>
-      </Page>
+      </Wrapper>
     );
   }
 }

@@ -1,24 +1,29 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { Image } from 'react-native';
+import styled from 'styled-components';
+
+import { Wrapper } from '@styles';
+import { welcomeArtwork } from '@assets';
+
+const Text = styled.Text``;
+const Button = styled.Button``;
 
 export default class Welcome extends React.Component {
   static navigationOptions = {
-    title: 'Welcome',
+    title: 'SignIn',
+    header: null,
   };
 
   render() {
+    const { navigation } = this.props;
     return (
-      <ScrollView style={styles.container}>
-        <Text>Welcome Screen</Text>
-      </ScrollView>
+      <Wrapper>
+        <Image source={welcomeArtwork} />
+        <Text>SignIn Screen</Text>
+        <Text>Lorem ipsum sit amet, Consectuteur adipscing</Text>
+        <Button title="Get Start" onPress={() => navigation.navigate('Join')} />
+        <Button title="Login" onPress={() => navigation.navigate('SignIn')} />
+      </Wrapper>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
-  },
-});

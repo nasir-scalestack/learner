@@ -1,18 +1,19 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import Page from '../components/styles/Page';
+import { Wrapper } from '@styles';
 
 export default class Join extends React.Component {
   static navigationOptions = {
     title: 'Join',
+    header: null,
   };
 
   render() {
     return (
-      <Page>
+      <Wrapper>
         <Text>Join Screen</Text>
-      </Page>
+      </Wrapper>
     );
   }
 }

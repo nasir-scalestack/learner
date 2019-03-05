@@ -21,24 +21,9 @@ export default class App extends React.Component {
 
   _loadResourcesAsync = async () =>
     Promise.all([
-      Asset.loadAsync([require('./src/assets/welcome-artwork.png')]),
       Font.loadAsync({
         // This is the font that we are using for our tab bar
         ...Icon.Ionicons.font,
-        // We include SpaceMono because we use it in HomeScreen.js. Feel free
-        // to remove this if you are not using it in your app
-        'sf-bold': require('./src/fonts/SF-UI-Text-Bold.otf'),
-        'sf-bold-italic': require('./src/fonts/SF-UI-Text-BoldItalic.otf'),
-        'sf-heavy': require('./src/fonts/SF-UI-Text-Heavy.otf'),
-        'sf-heavy-italic': require('./src/fonts/SF-UI-Text-HeavyItalic.otf'),
-        'sf-italic': require('./src/fonts/SF-UI-Text-Italic.otf'),
-        'sf-light': require('./src/fonts/SF-UI-Text-Light.otf'),
-        'sf-light-italic': require('./src/fonts/SF-UI-Text-LightItalic.otf'),
-        'sf-medium': require('./src/fonts/SF-UI-Text-Medium.otf'),
-        'sf-medium-italic': require('./src/fonts/SF-UI-Text-MediumItalic.otf'),
-        'sf-regular': require('./src/fonts/SF-UI-Text-Regular.otf'),
-        'sf-semibold': require('./src/fonts/SF-UI-Text-Semibold.otf'),
-        'sf-semibold-italic': require('./src/fonts/SF-UI-Text-SemiboldItalic.otf'),
       }),
     ]);
 
