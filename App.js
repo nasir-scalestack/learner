@@ -2,12 +2,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
-import { AppLoading, Asset, Font, Icon } from 'expo';
+import { AppLoading, Font, Icon } from 'expo';
+import styled, { ThemeProvider } from 'styled-components';
 import AppNavigator from './src/navigation/AppNavigator';
-import styled from 'styled-components';
-
-import * as images from '@assets';
-import * as fonts from '@fonts';
 
 const Container = styled.View`
   flex: 1;
@@ -53,7 +50,14 @@ export default class App extends React.Component {
     return (
       <Container>
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigator />
+        <ThemeProvider
+          theme={{
+            white: '#ffffff',
+            grey: '#EFF1F5',
+          }}
+        >
+          <AppNavigator />
+        </ThemeProvider>
       </Container>
     );
   }

@@ -1,17 +1,14 @@
 import React from 'react';
-import { Image } from 'react-native';
-import styled from 'styled-components';
+import { Text, Button } from 'react-native';
 
-import { Wrapper } from '@styles';
+import { Image, Wrapper } from '@styles';
 import { welcomeArtwork } from '@assets';
-
-const Text = styled.Text``;
-const Button = styled.Button``;
 
 export default class Welcome extends React.Component {
   static navigationOptions = {
     title: 'SignIn',
     header: null,
+    headerBackTitle: null,
   };
 
   render() {

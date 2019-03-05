@@ -5,8 +5,8 @@ import { Wrapper } from '@styles';
 
 export default class Join extends React.Component {
   static navigationOptions = {
-    title: 'Join',
-    header: null,
+    title: null,
+    headerTransparent: true,
   };
 
   render() {
