@@ -12,10 +12,24 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-flow": "^1.0.2",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.4.0",
     "expo": "^32.0.0",
+    "flow-bin": "^0.94.0",
+    "prettier": "^1.16.4",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "styled-components": "^4.1.3"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
