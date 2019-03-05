@@ -1,6 +1,9 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import {
+  createStackNavigator,
+  createBottomTabNavigator,
+} from 'react-navigation';
 
 import Chats from '../screens/Chats';
 import Courses from '../screens/Courses';
@@ -10,18 +13,21 @@ import Settings from '../screens/Settings';
 
 import TabBarIcon from '../components/TabBarIcon';
 
+const renderTabIcon = (focused, icon) => (
+  <TabBarIcon focused={focused} name={icon} />
+);
+
 const ChatsStack = createStackNavigator({
   Chats,
 });
 
 ChatsStack.navigationOptions = {
   tabBarLabel: 'Chats',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-    />
-  ),
+  tabBarIcon: ({ focused }) =>
+    renderTabIcon(
+      focused,
+      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
+    ),
 };
 
 const CoursesStack = createStackNavigator({
@@ -30,12 +36,11 @@ const CoursesStack = createStackNavigator({
 
 CoursesStack.navigationOptions = {
   tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-    />
-  ),
+  tabBarIcon: ({ focused }) =>
+    renderTabIcon(
+      focused,
+      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
+    ),
 };
 
 const HomeStack = createStackNavigator({
@@ -44,16 +49,11 @@ const HomeStack = createStackNavigator({
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+  tabBarIcon: ({ focused }) =>
+    renderTabIcon(
+      focused,
+      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
+    ),
 };
 
 const SearchStack = createStackNavigator({
@@ -62,14 +62,12 @@ const SearchStack = createStackNavigator({
 
 SearchStack.navigationOptions = {
   tabBarLabel: 'Search',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
-    />
-  ),
+  tabBarIcon: ({ focused }) =>
+    renderTabIcon(
+      focused,
+      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
+    ),
 };
-
 
 const SettingsStack = createStackNavigator({
   Settings,
@@ -77,12 +75,11 @@ const SettingsStack = createStackNavigator({
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-    />
-  ),
+  tabBarIcon: ({ focused }) =>
+    renderTabIcon(
+      focused,
+      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
+    ),
 };
 
 export default createBottomTabNavigator({

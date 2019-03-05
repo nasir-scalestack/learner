@@ -4,13 +4,13 @@ import { ScrollView, StyleSheet, Text, Image } from 'react-native';
 export default class SignIn extends React.Component {
   static navigationOptions = {
     title: 'SignIn',
-    header: null
+    header: null,
   };
 
   render() {
     return (
       <ScrollView style={styles.container}>
-              <Image
+        <Image
           style={styles.stretch}
           source={require('../assets/images/illustrations/welcome-artwork.png')}
         />

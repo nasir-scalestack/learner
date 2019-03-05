@@ -1,5 +1,9 @@
 import React from 'react';
-import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
+import {
+  createAppContainer,
+  createStackNavigator,
+  createSwitchNavigator,
+} from 'react-navigation';
 
 import AppStack from './MainTabNavigator';
 
@@ -7,19 +11,25 @@ import Join from '../screens/Join';
 import SignIn from '../screens/SignIn';
 
 const AuthStack = createStackNavigator(
-  { 
-    Join, 
-    SignIn
+  {
+    Join,
+    SignIn,
   },
   {
-    initialRouteName: 'SignIn'
-  });
+    initialRouteName: 'SignIn',
+  }
+);
 
-export default createAppContainer(createSwitchNavigator({
-  // You could add another route here for authentication.
-  // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-  App: AppStack,
-  Auth: AuthStack
-}, {
-  initialRouteName: 'Auth',
-}));
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      // You could add another route here for authentication.
+      // Read more at https://reactnavigation.org/docs/en/auth-flow.html
+      App: AppStack,
+      Auth: AuthStack,
+    },
+    {
+      initialRouteName: 'Auth',
+    }
+  )
+);
