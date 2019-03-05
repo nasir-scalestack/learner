@@ -1,3 +1,11 @@
+const softenedPackageAndAliasRules = {
+  ignore: [
+    '@assets',
+    '@components',
+    '@fonts',
+    '@styles'
+  ],
+}
 module.exports = {
     "extends": [
       "airbnb",
@@ -70,7 +78,8 @@ module.exports = {
       "space-before-function-paren": 0,
       "comma-dangle": 0,
       "max-len": 0,
-      "import/extensions": 0,
+      "import/no-unresolved": ["error", softenedPackageAndAliasRules],
+      "import/extensions": ["error", softenedPackageAndAliasRules],
       "no-underscore-dangle": 0,
       "consistent-return": 0,
       "react/display-name": 1,
@@ -81,6 +90,7 @@ module.exports = {
       "react/no-unescaped-entities": 0,
       "jsx-a11y/accessible-emoji": 0,
       "react/require-default-props": 0,
+      "react/prop-types": 0,
       "react/jsx-filename-extension": [
         1,
         {
@@ -137,5 +147,10 @@ module.exports = {
       "html",
       "prettier",
       "react-hooks"
-    ]
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    }
   }

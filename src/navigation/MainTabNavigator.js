@@ -11,7 +11,7 @@ import Home from '../screens/Home';
 import Search from '../screens/Search';
 import Settings from '../screens/Settings';
 
-import TabBarIcon from '../components/TabBarIcon';
+import { TabBarIcon } from '@components';
 
 const renderTabIcon = (focused, icon) => (
   <TabBarIcon focused={focused} name={icon} />
