@@ -4,11 +4,10 @@ module.exports = function(api) {
     [
       require.resolve('babel-plugin-module-resolver'),
       {
-        root: ['./src/'],
         alias: {
-          '@assets': './assets',
-          '@components': './components',
-          '@fonts': './fonts',
+          '@assets': './src/assets',
+          '@components': './src/components',
+          '@fonts': './src/fonts',
         },
       },
     ],
