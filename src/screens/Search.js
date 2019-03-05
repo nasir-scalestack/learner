@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-
-import Wrapper from '@styles';
+import { Wrapper } from '@styles';
 
 export default class Search extends React.Component {
   static navigationOptions = {

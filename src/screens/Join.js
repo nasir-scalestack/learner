@@ -1,19 +1,28 @@
 import React from 'react';
-import { Text } from 'react-native';
-
 import { Wrapper } from '@styles';
+import { SignUpForm } from '@components';
+import { LinearGradient } from 'expo';
 
-export default class Join extends React.Component {
+export default class SignIn extends React.Component {
   static navigationOptions = {
     title: null,
     headerTransparent: true,
   };
 
+  createUser = () => {
+    console.log('Clicked');
+  };
+
   render() {
     return (
-      <Wrapper>
-        <Text>Join Screen</Text>
-      </Wrapper>
+      <LinearGradient
+        colors={['rgba(239,241,245,0.74)', '#ffffff']}
+        style={{ flex: 1 }}
+      >
+        <Wrapper grey>
+          <SignUpForm onSubmit={this.createUser} />
+        </Wrapper>
+      </LinearGradient>
     );
   }
 }

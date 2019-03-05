@@ -1,17 +1,14 @@
 import React from 'react';
-import { Icon } from 'expo';
-
-import Colors from '../constants/Colors';
+import { Image } from 'react-native';
 
 export default class TabBarIcon extends React.Component {
   render() {
-    const { name, focused } = this.props;
+    const { image, imageFocused, focused } = this.props;
     return (
-      <Icon.Ionicons
-        name={name}
-        size={26}
-        style={{ marginBottom: -3 }}
-        color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+      <Image
+        source={focused ? imageFocused : image}
+        fadeDuration={0}
+        style={{ width: 26, height: 26 }}
       />
     );
   }
