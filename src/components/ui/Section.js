@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Text } from '@styles';
 
 const Button = styled.Button``;
 
@@ -10,17 +11,13 @@ const Header = styled.View`
   justify-content: space-between;
 `;
 
-const Title = styled.Text`
-  font-size: 30;
-`;
-
 const Wrapper = styled.View``;
 
 const Section = ({ title, button, children }) => (
   <Wrapper>
     {(title || button) && (
       <Header>
-        {title && <Title>{title}</Title>}
+        {title && <Text.H1>{title}</Text.H1>}
         {button && <Button title={button.title} onPress={button.onPress} />}
       </Header>
     )}
