@@ -4,8 +4,8 @@ const Image = styled.Image`
   ${props => props.width && `width: ${props.width}`};
   ${props => props.height && `height: ${props.height}`};
   ${props =>
-    props.rounded &&
-    `border-radius: ${props.width / 2};
+    props.borderRadius &&
+    `border-radius: ${props.borderRadius};
     overflow: hidden`}
   ${props =>
     props.bordered &&
