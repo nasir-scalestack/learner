@@ -1,28 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text } from '@styles';
+import { Text } from '@components';
 
-const Button = styled.Button``;
+const SectionButton = styled.Button``;
 
-const Header = styled.View`
+const SectionHeader = styled.View`
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
-const Wrapper = styled.View``;
+const SectionWrapper = styled.View``;
 
 const Section = ({ title, button, children }) => (
-  <Wrapper>
+  <SectionWrapper>
     {(title || button) && (
-      <Header>
+      <SectionHeader>
         {title && <Text.H1>{title}</Text.H1>}
-        {button && <Button title={button.title} onPress={button.onPress} />}
-      </Header>
+        {button && (
+          <SectionButton title={button.title} onPress={button.onPress} />
+        )}
+      </SectionHeader>
     )}
     {children}
-  </Wrapper>
+  </SectionWrapper>
 );
 
 export default Section;

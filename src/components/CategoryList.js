@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Text } from 'react-native';
-import { Section } from '@components';
+import { Text, Grid, Col, Row, Section } from '@components';
 
 import { Image } from '@styles';
 import {
@@ -13,55 +11,39 @@ import {
   scienceCategoryIcon,
 } from '@assets';
 
-const Grid = styled.View`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Col = styled.View`
-  flex: 1;
-  flex-direction: row;
-  margin-top: 20;
-`;
-
-const GridItem = styled.View`
-  flex: 1;
-  align-items: center;
-`;
-
 export default class CategoryList extends Component {
   render() {
     return (
       <Section title="Categories">
         <Grid>
-          <Col>
-            <GridItem>
+          <Row centered>
+            <Col>
               <Image source={businessCategoryIcon} />
-              <Text>Business</Text>
-            </GridItem>
-            <GridItem>
+              <Text.H3>Business</Text.H3>
+            </Col>
+            <Col>
               <Image source={designCategoryIcon} />
-              <Text>Design</Text>
-            </GridItem>
-            <GridItem>
+              <Text.H3>Design</Text.H3>
+            </Col>
+            <Col>
               <Image source={economyCategoryIcon} />
-              <Text>Economy</Text>
-            </GridItem>
-          </Col>
-          <Col>
-            <GridItem>
+              <Text.H3>Economy</Text.H3>
+            </Col>
+          </Row>
+          <Row>
+            <Col centered>
               <Image source={computingCategoryIcon} />
-              <Text>Business</Text>
-            </GridItem>
-            <GridItem>
+              <Text.H3>Business</Text.H3>
+            </Col>
+            <Col>
               <Image source={literatureCategoryIcon} />
-              <Text>Design</Text>
-            </GridItem>
-            <GridItem>
+              <Text.H3>Design</Text.H3>
+            </Col>
+            <Col>
               <Image source={scienceCategoryIcon} />
-              <Text>Economy</Text>
-            </GridItem>
-          </Col>
+              <Text.H3>Economy</Text.H3>
+            </Col>
+          </Row>
         </Grid>
       </Section>
     );

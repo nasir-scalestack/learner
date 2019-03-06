@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import normalize from '../helpers/normalizeText';
+import normalize from '../../helpers/normalizeText';
 
 const baseStyles = styled.Text`
   color: ${props => props.color || '#1F314A'};

@@ -1,10 +1,12 @@
 /* eslint-disable global-require */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Platform, StatusBar } from 'react-native';
+import { Platform, StatusBar, YellowBox } from 'react-native';
 import { AppLoading, Font, Icon } from 'expo';
 import styled, { ThemeProvider } from 'styled-components';
 import AppNavigator from './src/navigation/AppNavigator';
+
+YellowBox.ignoreWarnings(['Require cycle:', 'Remote debugger']);
 
 const Container = styled.View`
   flex: 1;

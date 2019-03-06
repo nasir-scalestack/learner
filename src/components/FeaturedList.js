@@ -17,7 +17,7 @@ export default class FeaturedList extends Component {
     const { data } = this.props;
     return (
       <Section
-        title="Categories"
+        title="Featured"
         button={{
           title: 'SEE ALL',
           onPress: () => console.log('click'),
