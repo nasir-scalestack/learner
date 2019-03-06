@@ -1,20 +1,18 @@
 import React from 'react';
 import { Formik } from 'formik';
-import { Text, Button } from 'react-native';
-
+import { Button } from 'react-native';
 import { defaultProfileImg } from '@assets';
 import { Image, Form, TextInput } from '@styles';
 
 const initialValues = {
   email: '',
-  name: '',
   password: '',
 };
 
-const SignInForm = ({ handleSignIn }) => (
-  <Formik initialValues={initialValues} onSubmit={() => handleSignIn}>
+const SignInForm = ({ onSubmit }) => (
+  <Formik initialValues={initialValues} onSubmit={onSubmit}>
     {({
-      values: { email, name, password },
+      values: { email, password },
       handleSubmit,
       handleChange,
       handleBlur,
@@ -26,13 +24,6 @@ const SignInForm = ({ handleSignIn }) => (
           height={130}
           rounded
           bordered
-        />
-        <TextInput
-          onChangeText={handleChange('name')}
-          onBlur={handleBlur('name')}
-          value={name}
-          placeholder="Name"
-          rounded
         />
         <TextInput
           onChangeText={handleChange('email')}
@@ -49,8 +40,7 @@ const SignInForm = ({ handleSignIn }) => (
           secureTextEntry
           rounded
         />
-        <Button onPress={handleSubmit} title="Join" />
-        <Text>By pressing 'Join' you agree to our terms and agreements</Text>
+        <Button onPress={handleSubmit} title="Enter" />
       </Form>
     )}
   </Formik>

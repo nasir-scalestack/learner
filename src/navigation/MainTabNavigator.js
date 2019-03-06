@@ -1,5 +1,6 @@
+/* eslint-disable react/display-name */
 import React from 'react';
-import { Platform } from 'react-native';
+
 import {
   createStackNavigator,
   createBottomTabNavigator,
@@ -12,22 +13,31 @@ import Search from '../screens/Search';
 import Settings from '../screens/Settings';
 
 import { TabBarIcon } from '@components';
-
-const renderTabIcon = (focused, icon) => (
-  <TabBarIcon focused={focused} name={icon} />
-);
+import {
+  homeIcon,
+  homeIconFocused,
+  coursesIcon,
+  coursesIconFocused,
+  moreIcon,
+  moreIconFocused,
+  searchIcon,
+  searchIconFocused,
+  messagesIcon,
+  messagesIconFocused,
+} from '@assets';
 
 const ChatsStack = createStackNavigator({
   Chats,
 });
 
 ChatsStack.navigationOptions = {
-  tabBarLabel: 'Chats',
-  tabBarIcon: ({ focused }) =>
-    renderTabIcon(
-      focused,
-      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
-    ),
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      image={messagesIcon}
+      imageFocused={messagesIconFocused}
+      focused={focused}
+    />
+  ),
 };
 
 const CoursesStack = createStackNavigator({
@@ -35,12 +45,13 @@ const CoursesStack = createStackNavigator({
 });
 
 CoursesStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) =>
-    renderTabIcon(
-      focused,
-      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
-    ),
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      image={coursesIcon}
+      imageFocused={coursesIconFocused}
+      focused={focused}
+    />
+  ),
 };
 
 const HomeStack = createStackNavigator({
@@ -48,12 +59,13 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) =>
-    renderTabIcon(
-      focused,
-      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
-    ),
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      image={homeIcon}
+      imageFocused={homeIconFocused}
+      focused={focused}
+    />
+  ),
 };
 
 const SearchStack = createStackNavigator({
@@ -61,12 +73,13 @@ const SearchStack = createStackNavigator({
 });
 
 SearchStack.navigationOptions = {
-  tabBarLabel: 'Search',
-  tabBarIcon: ({ focused }) =>
-    renderTabIcon(
-      focused,
-      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
-    ),
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      image={searchIcon}
+      imageFocused={searchIconFocused}
+      focused={focused}
+    />
+  ),
 };
 
 const SettingsStack = createStackNavigator({
@@ -74,18 +87,29 @@ const SettingsStack = createStackNavigator({
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) =>
-    renderTabIcon(
-      focused,
-      Platform.OS === 'ios' ? 'ios-options' : 'md-options'
-    ),
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      image={moreIcon}
+      imageFocused={moreIconFocused}
+      focused={focused}
+    />
+  ),
 };
 
-export default createBottomTabNavigator({
-  ChatsStack,
-  CoursesStack,
-  HomeStack,
-  SearchStack,
-  SettingsStack,
-});
+export default createBottomTabNavigator(
+  {
+    HomeStack,
+    SearchStack,
+    CoursesStack,
+    ChatsStack,
+    SettingsStack,
+  },
+  {
+    tabBarOptions: {
+      showLabel: false,
+      style: {
+        borderTopColor: 'transparent',
+      },
+    },
+  }
+);

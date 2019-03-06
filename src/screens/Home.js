@@ -1,17 +1,40 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Wrapper } from '@styles';
+import { featuredOne, featuredTwo, featuredThird } from '@assets';
+import { CategoryList, FeaturedList } from '@components';
 
-import Wrapper from '@styles';
+const data = [
+  {
+    key: 1,
+    title: 'Business Management',
+    image: featuredOne,
+    price: 19.99,
+  },
+  {
+    key: 2,
+    title: 'Learn How To Play Guitar',
+    image: featuredTwo,
+    price: 16.99,
+  },
+  {
+    key: 3,
+    title: 'Medicine & Biology Basic',
+    image: featuredThird,
+    price: 10.98,
+  },
+];
 
 export default class Home extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    header: null,
   };
 
   render() {
     return (
       <Wrapper>
-        <Text>Home Screen</Text>
+        <FeaturedList data={data} />
+        <CategoryList />
       </Wrapper>
     );
   }

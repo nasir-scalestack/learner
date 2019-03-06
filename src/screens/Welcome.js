@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, Button } from 'react-native';
-
 import { Image, Wrapper } from '@styles';
 import { welcomeArtwork } from '@assets';
 
