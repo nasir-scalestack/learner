@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Button, FlatList, Text } from 'react-native';
+import { FlatList, Text } from 'react-native';
 import { Section } from '@components';
 import { Image } from '@styles';
-
-const Header = styled.View`
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const H1 = styled.Text`
-  font-size: 30;
-`;
 
 const ListImage = styled(Image)`
   border-radius: 20;
