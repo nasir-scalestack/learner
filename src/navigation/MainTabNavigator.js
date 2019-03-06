@@ -107,6 +107,9 @@ export default createBottomTabNavigator(
   {
     tabBarOptions: {
       showLabel: false,
+      style: {
+        borderTopColor: 'transparent',
+      },
     },
   }
 );

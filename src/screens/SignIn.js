@@ -1,5 +1,4 @@
 import React from 'react';
-import { LinearGradient } from 'expo';
 import { SignInForm } from '@components';
 import { Wrapper } from '@styles';
 
@@ -16,14 +15,9 @@ export default class Join extends React.Component {
 
   render() {
     return (
-      <LinearGradient
-        colors={['rgba(239,241,245,0.74)', '#ffffff']}
-        style={{ flex: 1 }}
-      >
-        <Wrapper>
-          <SignInForm onSubmit={this.loginUser} />
-        </Wrapper>
-      </LinearGradient>
+      <Wrapper grey>
+        <SignInForm onSubmit={this.loginUser} />
+      </Wrapper>
     );
   }
 }

@@ -1,4 +1,7 @@
 export { default as defaultProfileImg } from './default-profile-image.png';
+export { default as featuredOne } from './featured.png';
+export { default as featuredTwo } from './featured2.png';
+export { default as featuredThird } from './featured3.png';
 export { default as welcomeArtwork } from './welcome-artwork.png';
 export { default as homeIcon } from './home.png';
 export { default as homeIconFocused } from './home-focused.png';
