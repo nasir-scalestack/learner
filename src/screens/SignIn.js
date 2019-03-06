@@ -8,7 +8,7 @@ export default class Join extends React.Component {
     headerTransparent: true,
   };
 
-  loginUser = values => {
+  loginUser = () => {
     const { navigation } = this.props;
     navigation.navigate('Home');
   };
