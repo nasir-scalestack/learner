@@ -1,9 +1,17 @@
-// Common Assets
+// Assets
 export { default as defaultProfileImg } from './default-profile-image.png';
 export { default as featuredOne } from './featured.png';
 export { default as featuredTwo } from './featured2.png';
 export { default as featuredThird } from './featured3.png';
 export { default as welcomeArtwork } from './welcome-artwork.png';
+export { default as profileOne } from './picture1.png';
+export { default as profileTwo } from './picture2.png';
+export { default as profileThree } from './picture3.png';
+export { default as profileFour } from './picture5.png';
+export { default as recommendedOne } from './recommended.png';
+export { default as recommendedTwo } from './recommended2.png';
+export { default as recommendedThree } from './recommended3.png';
+export { default as recommendedFour } from './recommended4.png';
 // Tab Icons
 export { default as homeIcon } from './home.png';
 export { default as homeIconFocused } from './home-focused.png';
