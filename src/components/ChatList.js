@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList, View } from 'react-native';
-import { Text } from '@components';
-import { Image } from '@styles';
+import { H3, Image } from '@styles';
 import styled from 'styled-components';
 
 const ChatItem = styled.View`
@@ -22,7 +21,7 @@ const ChatList = ({ data }) => (
           <Image source={image} width={50} height={50} rounded />
         </View>
         <View>
-          <Text.H3>{name}</Text.H3>
+          <H3>{name}</H3>
           <Message>{message}</Message>
         </View>
       </ChatItem>

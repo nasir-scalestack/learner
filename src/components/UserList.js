@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList, View } from 'react-native';
-import { Text } from '@components';
-import { Image } from '@styles';
+import { H4, Image } from '@styles';
 import styled from 'styled-components';
 
 const User = styled.View`
@@ -11,7 +10,7 @@ const User = styled.View`
 
 const UserList = ({ data }) => (
   <View>
-    <Text.H4>START A NEW CHAT</Text.H4>
+    <H4>START A NEW CHAT</H4>
     <FlatList
       data={data}
       horizontal

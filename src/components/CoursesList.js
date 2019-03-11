@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Image } from '@styles';
-import { Text, ProgressBar, Col, Grid } from '@components';
+import { H3, Image } from '@styles';
+import { ProgressBar, Col, Grid } from '@components';
 import styled from 'styled-components';
 
 import {
@@ -43,7 +43,7 @@ const CourseCard = ({ title, image, progress }) => (
       </View>
     </CouseCardHeader>
     <View>
-      <Text.H3>{title}</Text.H3>
+      <H3>{title}</H3>
       <ProgressBar percentage={progress} />
     </View>
   </CouseCardWrapper>
