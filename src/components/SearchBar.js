@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text } from 'react-native';
+import { Button, Text } from 'react-native';
 import { searchIconFocused } from '@assets';
 import { TextInput } from '@styles';
 
@@ -34,6 +34,7 @@ export default class SearchBar extends React.Component {
           placeholder="Search..."
           placeholderTextColor="#BBC1C8"
         />
+        <Button title="Filter" onPress={e => console.log(e)} />
         <Text>✖️</Text>
       </SearchWrapper>
     );

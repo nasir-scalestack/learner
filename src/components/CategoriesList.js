@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Text, Grid, Col, Row, Section } from '@components';
+import { Grid, Col, Row, Section } from '@components';
+import { H3, Image } from '@styles';
 
-import { Image } from '@styles';
 import {
   businessCategoryIcon,
   computingCategoryIcon,
@@ -19,29 +19,29 @@ export default class Categories extends Component {
           <Row centered>
             <Col>
               <Image source={businessCategoryIcon} />
-              <Text.H3>Business</Text.H3>
+              <H3>Business</H3>
             </Col>
             <Col>
               <Image source={designCategoryIcon} />
-              <Text.H3>Design</Text.H3>
+              <H3>Design</H3>
             </Col>
             <Col>
               <Image source={economyCategoryIcon} />
-              <Text.H3>Economy</Text.H3>
+              <H3>Economy</H3>
             </Col>
           </Row>
           <Row>
             <Col centered>
               <Image source={computingCategoryIcon} />
-              <Text.H3>Business</Text.H3>
+              <H3>Business</H3>
             </Col>
             <Col>
               <Image source={literatureCategoryIcon} />
-              <Text.H3>Design</Text.H3>
+              <H3>Design</H3>
             </Col>
             <Col>
               <Image source={scienceCategoryIcon} />
-              <Text.H3>Economy</Text.H3>
+              <H3>Economy</H3>
             </Col>
           </Row>
         </Grid>

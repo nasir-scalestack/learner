@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text } from '@components';
+import { H1 } from '@styles';
 
 const SectionButton = styled.Button``;
 
@@ -17,7 +17,7 @@ const Section = ({ title, button, children }) => (
   <SectionWrapper>
     {(title || button) && (
       <SectionHeader>
-        {title && <Text.H1>{title}</Text.H1>}
+        {title && <H1>{title}</H1>}
         {button && (
           <SectionButton title={button.title} onPress={button.onPress} />
         )}

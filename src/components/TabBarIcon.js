@@ -3,12 +3,18 @@ import { Image } from 'react-native';
 
 export default class TabBarIcon extends React.Component {
   render() {
-    const { image, imageFocused, focused } = this.props;
+    const {
+      image,
+      imageFocused,
+      focused,
+      imageWidth,
+      imageHeight,
+    } = this.props;
     return (
       <Image
         source={focused ? imageFocused : image}
         fadeDuration={0}
-        style={{ width: 26, height: 26 }}
+        style={{ width: imageWidth || 20, height: imageHeight || 20 }}
       />
     );
   }
