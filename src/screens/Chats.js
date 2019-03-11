@@ -1,13 +1,33 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import { defaultProfileImg } from '@assets';
 import { Wrapper } from '@styles';
-import { Section } from '@components';
+import { ChatList, Section } from '@components';
 import styled from 'styled-components';
 import normalize from '../helpers/normalizeText';
 
-const Safe = styled.SafeAreaView`
-  flex: 1;
-`;
+const CHAT_DATA = [
+  {
+    name: 'Hannah Tran',
+    message: 'Hi Hannah, Good Morning!',
+    image: defaultProfileImg,
+  },
+  {
+    name: 'Louise McGee',
+    message: 'Is question 2 relation to question 1',
+    image: defaultProfileImg,
+  },
+  {
+    name: 'Walter Osborne',
+    message: 'Thanks, I will get back to you',
+    image: defaultProfileImg,
+  },
+  {
+    name: 'Margaret Monroe',
+    message: 'Let me check that',
+    image: defaultProfileImg,
+  },
+];
 
 const Tabs = styled.View`
   display: flex;
@@ -32,32 +52,31 @@ export default class Chats extends React.Component {
 
   render() {
     return (
-      <Safe>
-        <Wrapper>
-          <Section
-            title="Chats"
-            button={{
-              title: 'Search',
-              onPress: () => console.log('click'),
-            }}
-          >
-            <Tabs>
-              <TouchableOpacity onPress={() => console.log('All Courses!')}>
-                <Tab active>All</Tab>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => console.log('Instructors!')}>
-                <Tab>Instructors</Tab>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => console.log('Friends!')}>
-                <Tab>Friends</Tab>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => console.log('Bots!')}>
-                <Tab>Bots</Tab>
-              </TouchableOpacity>
-            </Tabs>
-          </Section>
-        </Wrapper>
-      </Safe>
+      <Wrapper>
+        <Section
+          title="Chats"
+          button={{
+            title: 'Search',
+            onPress: () => console.log('click'),
+          }}
+        >
+          <Tabs>
+            <TouchableOpacity onPress={() => console.log('All Courses!')}>
+              <Tab active>All</Tab>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log('Instructors!')}>
+              <Tab>Instructors</Tab>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log('Friends!')}>
+              <Tab>Friends</Tab>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log('Bots!')}>
+              <Tab>Bots</Tab>
+            </TouchableOpacity>
+          </Tabs>
+          <ChatList data={CHAT_DATA} />
+        </Section>
+      </Wrapper>
     );
   }
 }

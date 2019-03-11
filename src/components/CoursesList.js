@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Image } from '@styles';
-import { ProgressBar, Col, Grid } from '@components';
+import { Text, ProgressBar, Col, Grid } from '@components';
 import styled from 'styled-components';
 
 import {
