@@ -13,7 +13,7 @@ import {
 import { SearchBar, Recommended, Instructors } from '@components';
 import { Wrapper } from '@styles';
 
-const instructorsData = [
+const INSTRUCTORS_DATA = [
   {
     key: 1,
     name: 'James',
@@ -77,7 +77,7 @@ export default class Search extends React.Component {
     return (
       <Wrapper>
         <SearchBar />
-        <Instructors data={instructorsData} />
+        <Instructors data={INSTRUCTORS_DATA} />
         <Recommended data={recommendedData} />
       </Wrapper>
     );

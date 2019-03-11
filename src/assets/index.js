@@ -23,6 +23,10 @@ export { default as moreIcon } from './more.png';
 export { default as moreIconFocused } from './more-focused.png';
 export { default as coursesIcon } from './my-course.png';
 export { default as coursesIconFocused } from './my-course-focused.png';
+
+// More Icons
+export { default as optionsIcon } from './optionsIcon.png';
+
 // Categories
 export { default as businessCategoryIcon } from './categories/business.png';
 export { default as computingCategoryIcon } from './categories/computing.png';

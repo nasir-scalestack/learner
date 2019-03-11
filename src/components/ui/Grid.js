@@ -5,7 +5,9 @@ import Row from './Row';
 const GridStyle = styled.View`
   flex: 1;
   flex-direction: ${props => (props.ifRow ? 'column' : 'row')};
+  flex-wrap: wrap;
 `;
+
 export default class Grid extends React.Component {
   ifRow() {
     const { children } = this.props;
@@ -18,6 +20,7 @@ export default class Grid extends React.Component {
 
   render() {
     const { children } = this.props;
+
     return <GridStyle ifRow={this.ifRow()}>{children}</GridStyle>;
   }
 }

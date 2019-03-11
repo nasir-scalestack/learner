@@ -7,7 +7,7 @@ export { default as SearchBar } from './SearchBar';
 export { default as SignInForm } from './SignInForm';
 export { default as SignUpForm } from './SignUpForm';
 export { default as TabBarIcon } from './TabBarIcon';
-
+export { default as ProgressBar } from './ProgressBar';
 // ui components
 export { default as Col } from './ui/Col';
 export { default as Grid } from './ui/Grid';
