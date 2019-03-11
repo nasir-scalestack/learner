@@ -10,7 +10,7 @@ import {
   profileFour,
 } from '@assets';
 
-import { SearchBar, Recommended, Instructors } from '@components';
+import { SearchBar, RecommendedList, InstructorsList } from '@components';
 import { Wrapper } from '@styles';
 
 const INSTRUCTORS_DATA = [
@@ -40,7 +40,7 @@ const INSTRUCTORS_DATA = [
   },
 ];
 
-const recommendedData = [
+const RECOMMENDED_DATA = [
   {
     key: 1,
     name: 'Business',
@@ -77,8 +77,8 @@ export default class Search extends React.Component {
     return (
       <Wrapper>
         <SearchBar />
-        <Instructors data={INSTRUCTORS_DATA} />
-        <Recommended data={recommendedData} />
+        <InstructorsList data={INSTRUCTORS_DATA} />
+        <RecommendedList data={RECOMMENDED_DATA} />
       </Wrapper>
     );
   }

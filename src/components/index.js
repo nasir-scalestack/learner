@@ -1,8 +1,9 @@
 // feature components
-export { default as Categories } from './Categories';
-export { default as Instructors } from './Instructors';
-export { default as Featured } from './Featured';
-export { default as Recommended } from './Recommended';
+export { default as CategoriesList } from './CategoriesList';
+export { default as InstructorsList } from './InstructorsList';
+export { default as FeaturedList } from './FeaturedList';
+export { default as CoursesList } from './CoursesList';
+export { default as RecommendedList } from './RecommendedList';
 export { default as SearchBar } from './SearchBar';
 export { default as SignInForm } from './SignInForm';
 export { default as SignUpForm } from './SignUpForm';

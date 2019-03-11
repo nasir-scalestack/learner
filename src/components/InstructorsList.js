@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 import { ListItem, Section } from '@components';
 
-export default class Instructors extends Component {
+export default class InstructorsList extends Component {
   render() {
     const { data } = this.props;
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper } from '@styles';
 import { featuredOne, featuredTwo, featuredThird } from '@assets';
-import { Categories, Featured } from '@components';
+import { CategoriesList, FeaturedList } from '@components';
 
 const data = [
   {
@@ -33,8 +33,8 @@ export default class Home extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Featured data={data} />
-        <Categories />
+        <FeaturedList data={data} />
+        <CategoriesList />
       </Wrapper>
     );
   }

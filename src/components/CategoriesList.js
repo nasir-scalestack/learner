@@ -11,7 +11,7 @@ import {
   scienceCategoryIcon,
 } from '@assets';
 
-export default class Categories extends Component {
+export default class CategoriesList extends Component {
   render() {
     return (
       <Section title="Categories">
