@@ -109,3 +109,8 @@ export default class App extends React.Component {
     );
   }
 }
+
+// TODO: Create cards with headers, footers
+// TODO: Create ListItem that accepts leftAvatar, Subtitle
+// TODO: Remove importing Image style and make a Avatar component which takes a badge (online, offline)
+// TODO: Create a Badge component

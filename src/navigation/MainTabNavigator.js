@@ -86,12 +86,15 @@ const SettingsStack = createStackNavigator({
   Settings,
 });
 
+// TODO: Verify width and height is responsive, if so dynamically calc width/height
 SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       image={moreIcon}
       imageFocused={moreIconFocused}
       focused={focused}
+      imageWidth={31.22}
+      imageHeight={7.22}
     />
   ),
 };

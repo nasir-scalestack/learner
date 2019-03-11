@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { SafeAreaView, TouchableOpacity } from 'react-native';
 import { defaultProfileImg } from '@assets';
 import { Wrapper } from '@styles';
-import { ChatList, Section } from '@components';
+import { ChatList, UserList, Section } from '@components';
 import styled from 'styled-components';
 import normalize from '../helpers/normalizeText';
 
@@ -25,6 +25,21 @@ const CHAT_DATA = [
   {
     name: 'Margaret Monroe',
     message: 'Let me check that',
+    image: defaultProfileImg,
+  },
+];
+
+const USER_DATA = [
+  {
+    image: defaultProfileImg,
+  },
+  {
+    image: defaultProfileImg,
+  },
+  {
+    image: defaultProfileImg,
+  },
+  {
     image: defaultProfileImg,
   },
 ];
@@ -52,31 +67,34 @@ export default class Chats extends React.Component {
 
   render() {
     return (
-      <Wrapper>
-        <Section
-          title="Chats"
-          button={{
-            title: 'Search',
-            onPress: () => console.log('click'),
-          }}
-        >
-          <Tabs>
-            <TouchableOpacity onPress={() => console.log('All Courses!')}>
-              <Tab active>All</Tab>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Instructors!')}>
-              <Tab>Instructors</Tab>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Friends!')}>
-              <Tab>Friends</Tab>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => console.log('Bots!')}>
-              <Tab>Bots</Tab>
-            </TouchableOpacity>
-          </Tabs>
-          <ChatList data={CHAT_DATA} />
-        </Section>
-      </Wrapper>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Wrapper>
+          <Section
+            title="Chats"
+            button={{
+              title: 'Search',
+              onPress: () => console.log('click'),
+            }}
+          >
+            <Tabs>
+              <TouchableOpacity onPress={() => console.log('All Courses!')}>
+                <Tab active>All</Tab>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => console.log('Instructors!')}>
+                <Tab>Instructors</Tab>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => console.log('Friends!')}>
+                <Tab>Friends</Tab>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => console.log('Bots!')}>
+                <Tab>Bots</Tab>
+              </TouchableOpacity>
+            </Tabs>
+            <ChatList data={CHAT_DATA} />
+            <UserList data={USER_DATA} />
+          </Section>
+        </Wrapper>
+      </SafeAreaView>
     );
   }
 }

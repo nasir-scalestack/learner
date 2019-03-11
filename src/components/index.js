@@ -1,5 +1,6 @@
 // feature components
 export { default as ChatList } from './ChatList';
+export { default as UserList } from './UserList';
 export { default as CategoriesList } from './CategoriesList';
 export { default as InstructorsList } from './InstructorsList';
 export { default as FeaturedList } from './FeaturedList';

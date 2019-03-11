@@ -19,7 +19,7 @@ const ChatList = ({ data }) => (
     renderItem={({ item: { name, message, image } }) => (
       <ChatItem>
         <View>
-          <Image source={image} width={50} height={50} />
+          <Image source={image} width={50} height={50} rounded />
         </View>
         <View>
           <Text.H3>{name}</Text.H3>
