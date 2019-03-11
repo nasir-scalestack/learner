@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Platform, StatusBar, YellowBox } from 'react-native';
-import { AppLoading, Font, Icon } from 'expo';
+import { AppLoading, Font, Icon, Asset } from 'expo';
 import styled, { ThemeProvider } from 'styled-components';
 import AppNavigator from './src/navigation/AppNavigator';
 
@@ -13,19 +13,63 @@ const Container = styled.View`
   background-color: #ffffff;
 `;
 
+function cacheImages(images) {
+  return images.map(image => {
+    if (typeof image === 'string') {
+      return Image.prefetch(image);
+    }
+    return Asset.fromModule(image).downloadAsync();
+  });
+}
+
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
 
-  _loadResourcesAsync = async () =>
-    Promise.all([
+  _loadResourcesAsync = async () => {
+    const imageAssets = cacheImages([
+      require('./src/assets/default-profile-image.png'),
+      require('./src/assets/featured.png'),
+      require('./src/assets/featured2.png'),
+      require('./src/assets/featured3.png'),
+      require('./src/assets/welcome-artwork.png'),
+      require('./src/assets/picture1.png'),
+      require('./src/assets/picture2.png'),
+      require('./src/assets/picture3.png'),
+      require('./src/assets/picture5.png'),
+      require('./src/assets/recommended.png'),
+      require('./src/assets/recommended2.png'),
+      require('./src/assets/recommended3.png'),
+      require('./src/assets/recommended4.png'),
+      require('./src/assets/home.png'),
+      require('./src/assets/home-focused.png'),
+      require('./src/assets/search.png'),
+      require('./src/assets/search-focused.png'),
+      require('./src/assets/messages.png'),
+      require('./src/assets/messages-focused.png'),
+      require('./src/assets/more.png'),
+      require('./src/assets/more-focused.png'),
+      require('./src/assets/my-course.png'),
+      require('./src/assets/my-course-focused.png'),
+      require('./src/assets/optionsIcon.png'),
+      require('./src/assets/categories/business.png'),
+      require('./src/assets/categories/computing.png'),
+      require('./src/assets/categories/design.png'),
+      require('./src/assets/categories/economy.png'),
+      require('./src/assets/categories/literature.png'),
+      require('./src/assets/categories/science.png'),
+    ]);
+
+    return Promise.all([
+      ...imageAssets,
       Font.loadAsync({
         // This is the font that we are using for our tab bar
         ...Icon.Ionicons.font,
         'sf-ui-bold': require('./src/fonts/SF-UI-Text-Bold.otf'),
       }),
     ]);
+  };
 
   _handleLoadingError = error => {
     // In this case, you might want to report the error to your error
